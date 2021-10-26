@@ -16,5 +16,13 @@ public class Számla extends BankiSzolgáltatás{
         return egyenleg;
     }
 
-
+    public  boolean Kivesz(double osszeg) {
+        HitelSzámla h = new HitelSzámla(this.getT(), getEgyenleg());
+        if (egyenleg - osszeg > -1*h.getHitelkeret()) {
+            egyenleg -= osszeg;
+            return true;
+        }else {
+            return false;
+        }
+    }
 }
