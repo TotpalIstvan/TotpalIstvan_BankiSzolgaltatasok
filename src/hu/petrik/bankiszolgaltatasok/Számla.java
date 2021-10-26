@@ -25,4 +25,10 @@ public class Számla extends BankiSzolgáltatás{
             return false;
         }
     }
+
+    public Kártya ÚjKártya(String leendoSzam) {
+        Számla s = new Számla(super.getT());
+        Kártya k = new Kártya(this.getT(), s, leendoSzam);
+        return k;
+    }
 }
