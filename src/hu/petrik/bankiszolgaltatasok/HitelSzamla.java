@@ -1,9 +1,9 @@
 package hu.petrik.bankiszolgaltatasok;
 
-public class HitelSzámla extends Számla {
+public class HitelSzamla extends Szamla {
     private double hitelKeret;
 
-    public  HitelSzámla(Tulajdonos t, double hitelKeret) {
+    public HitelSzamla(Tulajdonos t, double hitelKeret) {
         super(t);
         this.hitelKeret = hitelKeret;
     }

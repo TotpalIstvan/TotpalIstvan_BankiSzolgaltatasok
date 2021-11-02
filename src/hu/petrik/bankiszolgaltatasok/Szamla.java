@@ -1,9 +1,9 @@
 package hu.petrik.bankiszolgaltatasok;
 
-public class Számla extends BankiSzolgáltatás{
+public class Szamla extends BankiSzolgaltatas {
     private double egyenleg;
 
-    public Számla(Tulajdonos t) {
+    public Szamla(Tulajdonos t) {
         super(t);
     }
 
@@ -17,7 +17,7 @@ public class Számla extends BankiSzolgáltatás{
     }
 
     public  boolean Kivesz(double osszeg) {
-        HitelSzámla h = new HitelSzámla(this.getT(), getEgyenleg());
+        HitelSzamla h = new HitelSzamla(this.getT(), getEgyenleg());
         if (egyenleg - osszeg > -1*h.getHitelkeret()) {
             egyenleg -= osszeg;
             return true;
@@ -26,9 +26,9 @@ public class Számla extends BankiSzolgáltatás{
         }
     }
 
-    public Kártya ÚjKártya(String leendoSzam) {
-        Számla s = new Számla(super.getT());
-        Kártya k = new Kártya(this.getT(), s, leendoSzam);
+    public Kartya ÚjKártya(String leendoSzam) {
+        Szamla s = new Szamla(super.getT());
+        Kartya k = new Kartya(this.getT(), s, leendoSzam);
         return k;
     }
 }

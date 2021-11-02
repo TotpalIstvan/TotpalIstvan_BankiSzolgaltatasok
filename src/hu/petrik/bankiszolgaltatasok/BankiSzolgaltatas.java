@@ -1,9 +1,9 @@
 package hu.petrik.bankiszolgaltatasok;
 
-public class BankiSzolgáltatás {
+public class BankiSzolgaltatas {
     private Tulajdonos t;
 
-    public BankiSzolgáltatás (Tulajdonos t) {
+    public BankiSzolgaltatas(Tulajdonos t) {
         this.t = t;
     }
 

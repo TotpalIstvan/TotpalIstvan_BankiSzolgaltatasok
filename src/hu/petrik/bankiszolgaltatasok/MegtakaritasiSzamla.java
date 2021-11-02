@@ -1,10 +1,10 @@
 package hu.petrik.bankiszolgaltatasok;
 
-public class MegtakarításiSzámla extends Számla {
+public class MegtakaritasiSzamla extends Szamla {
     private double kamatMertek;
     private static double kamatAlap;
 
-    public MegtakarításiSzámla(Tulajdonos t, double kamatAlap) {
+    public MegtakaritasiSzamla(Tulajdonos t, double kamatAlap) {
         super(t);
         this.kamatMertek = kamatAlap;
     }
